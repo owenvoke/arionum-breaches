@@ -37,20 +37,20 @@
             </div>
         </div>
 
-        <div v-if="isBreached === true" class="notification is-danger" role="alert" v-cloak>
-            <h4 class="heading is-size-4">
-                <i class="fas fa-exclamation-circle"></i>
-                <span>Wallet compromised</span>
-            </h4>
-            <p>This wallet has been compromised in a breach.</p>
-        </div>
-
         <div v-if="isBreached === false" class="notification is-success" role="alert" v-cloak>
             <h4 class="heading is-size-4">
                 <i class="fas fa-check-circle"></i>
                 <span>Wallet not found</span>
             </h4>
             <p>This wallet was not found in the breach database.</p>
+        </div>
+
+        <div v-if="isBreached === true" class="notification is-danger" role="alert" v-cloak>
+            <h4 class="heading is-size-4">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Wallet compromised</span>
+            </h4>
+            <p>This wallet has been compromised in a breach.</p>
         </div>
     </div>
 </div>
