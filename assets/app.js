@@ -1,3 +1,7 @@
+const availableBreaches = [
+  '2018-12-08'
+]
+
 new Vue({
   el: '#app',
   data () {
@@ -13,7 +17,10 @@ new Vue({
     }
   },
   mounted () {
-    // TODO: Update to allow multiple breach files
-    window.fetch('./breaches/2018-12-08.json').then(data => data.json()).then(data => this.breaches = data)
+    for (let breachId in availableBreaches) {
+      window.fetch('./breaches/' + availableBreaches[breachId] + '.json')
+        .then(data => data.json())
+        .then(data => this.breaches = [...new Set([].concat(...this.breaches, ...data))])
+    }
   }
 })
