@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Arionum Breach DB</title>
+    <link rel="stylesheet" href="./assets/app.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.min.css"
           integrity="sha256-2pUeJf+y0ltRPSbKOeJh09ipQFYxUdct5nTY6GAXswA=" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21"
@@ -36,12 +37,12 @@
             </div>
         </div>
 
-        <div v-if="isBreached === true" class="notification is-danger" role="alert">
+        <div v-if="isBreached === true" class="notification is-danger" role="alert" v-cloak>
             <h4 class="heading is-size-4">Wallet compromised</h4>
             <p>This wallet has been compromised in a breach.</p>
         </div>
 
-        <div v-if="isBreached === false" class="notification is-success" role="alert">
+        <div v-if="isBreached === false" class="notification is-success" role="alert" v-cloak>
             <h4 class="heading is-size-4">Wallet not found</h4>
             <p>This wallet was not found in the breach database.</p>
         </div>
