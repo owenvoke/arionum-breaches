@@ -4,7 +4,7 @@ new Vue({
     return {
       isBreached: false,
       breaches: [],
-      publicKey: ''
+      publicKey: window.location.hash.substr(1) || ''
     }
   },
   methods: {
