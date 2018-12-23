@@ -36,9 +36,14 @@
             </div>
         </div>
 
-        <div v-if="isBreached" class="notification is-danger" role="alert">
+        <div v-if="isBreached === true" class="notification is-danger" role="alert">
             <h4 class="heading is-size-4">Wallet compromised</h4>
             <p>This wallet has been compromised in a breach.</p>
+        </div>
+
+        <div v-if="isBreached === false" class="notification is-success" role="alert">
+            <h4 class="heading is-size-4">Wallet not found</h4>
+            <p>This wallet was not found in the breach database.</p>
         </div>
     </div>
 </div>

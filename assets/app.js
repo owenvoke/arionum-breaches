@@ -1,3 +1,7 @@
+/**
+ * Available breach Files
+ * @link ../breaches
+ **/
 const availableBreaches = [
   '2018-12-08'
 ]
@@ -6,7 +10,7 @@ new Vue({
   el: '#app',
   data () {
     return {
-      isBreached: false,
+      isBreached: null,
       breaches: [],
       publicKey: window.location.hash.substr(1) || ''
     }
@@ -14,6 +18,11 @@ new Vue({
   methods: {
     checkIfBreached () {
       this.isBreached = this.breaches.includes(this.publicKey)
+    }
+  },
+  watch: {
+    publicKey: function () {
+      this.isBreached = null
     }
   },
   mounted () {
