@@ -35,6 +35,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-live-instance]: https://img.shields.io/badge/live%20instance-available-blue.svg?style=flat-square
 
-[link-live-instance]: https://arionum-breaches.netlify.com
+[link-live-instance]: https://arionum-breaches.netlify.app
 [link-author]: https://github.com/owenvoke
 [link-contributors]: ../../contributors
